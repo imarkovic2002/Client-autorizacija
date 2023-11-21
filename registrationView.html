@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        /* Basic styling for clarity */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .registration-container {
+            width: 450px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box; /* Ensure padding and border included in width */
+        }
+        input {
+            width: calc(100% - 16px); /* Adjusted width to include padding */
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box; /* Ensure padding and border included in width */
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 28%; /* Adjust width to allow space between buttons */
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-container">
+        <nav>
+            <a href="index.html">Index</a>
+            |
+            <a href="loginView.html">Login</a>
+            |
+            <button id="getUserProfile">Get Profile</button>
+        </nav>
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" id="submitButton">Submit</button>
+            <button type="button" id="clearButton">Clear</button>
+            <button type="button" id="testButton">Test</button>
+        </form>
+    </div>
+    <script src="registrationView.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
